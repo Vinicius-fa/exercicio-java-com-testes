@@ -1,7 +1,10 @@
 package org.example.repository;
 
 import org.example.model.Produto;
+import org.example.util.ConexaoBanco;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -9,7 +12,10 @@ public class ProdutoRepositoryImpl implements ProdutoRepository{
 
     @Override
     public Produto save(Produto produto) throws SQLException {
-        return null;
+        String sql="INSERT INTO produto (nome, preco, quantidade, categoria) VALUES (?, ?, ?, ?)";
+
+        try (Connection conn = ConexaoBanco.conectar();
+             PreparedStatement )
     }
 
     @Override
