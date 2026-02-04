@@ -13,7 +13,7 @@ public class ProdutoServiceImpl implements ProdutoService{
     @Override
     public Produto cadastrarProduto(Produto produto) throws SQLException {
         if (produto.getPreco() < 0) {
-            throw new IllegalArgumentException("Preco deve ser positivo.");
+            throw new IllegalArgumentException("Preço deve ser positivo.");
         }
         return repository.save(produto);
     }
